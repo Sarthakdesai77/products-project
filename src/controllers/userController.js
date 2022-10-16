@@ -6,6 +6,7 @@ const isValidPhone = (pw) => {
         return true
 }
 
+// make CRUD API operation on the user's table 
 const createUser = async (req, res) => {
     try {
         let body = req.body;

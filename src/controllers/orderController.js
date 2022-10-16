@@ -35,6 +35,7 @@ const createOrder = async (req, res) => {
     }
 }
 
+// make GET API  which contains the number of products ordered on a monthly and yearly basis 
 const getProducts = async (req, res) => {
     try {
         let month = req.query.month;
@@ -72,6 +73,7 @@ const getProducts = async (req, res) => {
     }
 }
 
+// make an API that shows the number of users who have ordered a product name WHEAT
 const getUserwithWheat = async (req, res) => {
     try {
         let orderDetails = await orderModel.find({ isDeleted: false }).populate('userId', { firstName: 1, lastName: 1, _id: 0 }).populate('productId', { _id: 0, __v: 0, createdAt: 0, updatedAt: 0, isDeleted: 0 })

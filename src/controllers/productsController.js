@@ -25,6 +25,7 @@ const createProduct = async (req, res) => {
     }
 }
 
+//  make an API which margins of the products: the list should be in descending order
 const getProducts = async (req, res) => {
 
     try {
